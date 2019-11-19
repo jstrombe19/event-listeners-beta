@@ -20,8 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
     surveyForm.addEventListener('submit', event => {
         event.preventDefault();
         const surveyResponse = document.createElement('h3');
-        surveyForm.childNodes.forEach(response => {
-            surveyResponse.innerText=`Hi, my name is ${surveyForm.childNodes[0].value}, I am ${surveyForm.childNodes[1].value}, and my favorite ice cream flavor is ${surveyForm.childNodes[2].value}.`
+        const responses = Array.from(surveyForm.childNodes);
+        responses.forEach(response => {
+            surveyResponse.innerText=`Hi, my name is ${responses[0].value}, I am ${responses[1].value}, and my favorite ice cream flavor is ${responses[2].value}.`
         })   
         surveyResponses.appendChild(surveyResponse);
     })
