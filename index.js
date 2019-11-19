@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     surveyInputs.forEach(input => {
         const inputField = document.createElement('input');
-        inputField.setAttribute('id', input);
+        inputField.setAttribute('class', input);
         inputField.setAttribute('placeholder', input);
         surveyForm.append(inputField);
     })
