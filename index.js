@@ -20,11 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     surveyForm.addEventListener('submit', event => {
         event.preventDefault();
         const surveyResponse = document.createElement('h3');
-        const responses = Array.from(surveyForm.childNodes);
-        responses.forEach(response => {
-            surveyResponse.innerText=`Hi, my name is ${responses[0].value}, I am ${responses[1].value}, and my favorite ice cream flavor is ${responses[2].value}.`
-        })   
+        const responsesArray = Array.from(surveyForm.childNodes);
+        responsesArray.forEach(response => {
+            surveyResponse.innerText=`Hi, my name is ${responsesArray[0].value}, I am ${responsesArray[1].value}, and my favorite ice cream flavor is ${responsesArray[2].value}.`
+        });
         surveyResponses.appendChild(surveyResponse);
+        surveyForm.reset();
     })
     
     header.innerText="Linda, Linda, Linda! Listen, Linda!"
